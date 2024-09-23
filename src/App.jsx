@@ -10,17 +10,20 @@ function App() {
 
   return (
     <>
-      {puppies.map((puppy) => {
-        return <p onClick={() => {setFeatPupId(puppy.id)}} key={puppy.id}>{puppy.name}</p>
-      })}
+      <h1>Puppy Pals!</h1>
+      <menu>
+        {puppies.map((puppy) => {
+          return <li onClick={() => {setFeatPupId(puppy.id)}} key={puppy.id}>{puppy.name}</li>
+        })}
+      </menu>
       {featPupId && (
-        <div>
+        <article>
           <h2>{featuredPup.name}</h2>
           <ul>
             <li>Age: {featuredPup.age}</li>
             <li>Email: {featuredPup.email}</li>
           </ul>
-        </div>
+        </article>
       )}
     </>
   )
