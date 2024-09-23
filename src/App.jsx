@@ -16,7 +16,7 @@ function App() {
           return <li onClick={() => {setFeatPupId(puppy.id)}} key={puppy.id}>{puppy.name}</li>
         })}
       </menu>
-      {featPupId && (
+      {featPupId ? (
         <article>
           <h2>{featuredPup.name}</h2>
           <ul>
@@ -24,7 +24,7 @@ function App() {
             <li>Email: {featuredPup.email}</li>
           </ul>
         </article>
-      )}
+      ) : <p className='empty-message'>Select a puppy above to view more details.</p>}
     </>
   )
 }

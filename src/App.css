@@ -31,7 +31,8 @@ menu li {
   cursor: pointer;
 }
 
-article {
+article,
+.empty-message {
   padding: 2rem;
   border-radius: 1rem;
   background-color: #ffc5a2;
